@@ -12,15 +12,39 @@ AvailableProducts = 18;
 UsedImage = "None";
 Score = 0;
 
+function createCookie(cookieValue) {
+	switch(cookieValue) {
+		case 1: {
+			// Cookie: Never show 'How This Works' Again
+			document.cookie = "howThisWorks_Show=False";
+		}
+	}
+}
+
+function readCookies() {
+	// Read Cookies
+	let cookieList = document.cookie;
+
+	if (cookieList.length == 0)
+		console.log("No Cookies");
+	else {
+		if (cookieList[0] == "howThisWorks_Show=False")
+		document.getElementsByClassName("howItWorks").style.display = "none";
+	}
+	console.log(document.cookie);
+}
+
 function getRandNum(max) {
 	return Math.floor(Math.random() * max);
 }
 
 function returnRandNum() {
 	showImg(getRandNum(AvailableProducts) + ".png");
+
 	document.getElementById("howItWorksBox").style.display = "none";
 	document.getElementById("productButton").textContent = "New Product";
 	document.getElementById("Score").style.display = "block";
+	document.getElementById("descriptionBox").style.display = "block";
 }
 
 function showImg(ImageFile) {
@@ -90,5 +114,41 @@ function changeTitleText(isCorrect) {
 		document.getElementById("titleText").textContent = "Incorrect";
 
 	document.getElementById("productEOLEntryDate").value = "yyyy-mm-dd";
+	PreviousImage = UsedImage;
 	returnRandNum();
+	revealKillDate(UsedImage);
+}
+
+function revealKillDate(product) {
+	killDate = document.getElementById("prevKillDate");
+
+	killDate.textContent = "The previous product was killed on";
+	return;
+}
+
+function updateDescription(product) {
+	productDesc = document.getElementById("productDesc");
+
+	switch(product) {
+		case '0.png': {
+			productDesc.textContent = "Google TV is a discontinued smart TV operating system from Google co-developed by \
+			Intel, Sony and Logitech. It launched in October 2010 with official devices initially made by Sony and \
+			Logitech. Google TV integrated the Android 3.0/3.2 operating system and the Google Chrome web browser to \
+			create an interactive television overlay on top of existing online video sites to add a 10-foot user \
+			interface, for a smart TV experience.";
+			break;
+		}
+
+		case '1.png': {
+			productDesc.textContent = "Google Talk was an instant messaging service that provided both text and voice communication. \
+			The instant messaging service was variously referred to colloquially as Gchat, Gtalk, or Gmessage among its users.";
+			break;
+		}
+
+		case '2.png': {
+			productDesc.textContent = "The Google Directory was a web directory hosted by Google. \
+			Google Business Places and Recommended Businesses is now commonly referred to as the Google directory. Not much information \
+			is given about this service on the Wikipedia page. Apologies for the short description.";
+		}
+	}
 }

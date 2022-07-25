@@ -22,18 +22,30 @@
 		<div class="howItWorks" id="howItWorksBox">
 		<h3>How it Works</h3>
 		<p>
-		Here's how it works. A picture of a Google product, either
-		dead, going to be killed, or active, will appear. You then have
+		Here's how it works. A picture of a Google product, either dead, going to be killed, or active, will appear. You then have 
 		to guess when the product got killed or is going to be killed.
 		</p>
+		
+		<p><button class="btn" onclick="createCookie(1);">Never Show This Again</button></p>
 		</div>
 
 		<h2 id="Score" style="display: none;">Score: <idk id="scoreCounter">0</idk></h2>
+
+		<div class="productDescBox" id="descriptionBox">
+			<h2>About this Product</h2>
+			<p id="productDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+			<p>The Previous Product Was Killed On: <br><b id="prevKillDate"></b></p>
+		</div>
+
 		<div class="product">
 			<br>
 			<img src="" class="productImage" />
 		</div>
+
 		<br>
+
 		<p align="center">
 		I guess that <b id="productName">________________</b> will be killed on: 
 
