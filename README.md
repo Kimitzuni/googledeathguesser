@@ -28,7 +28,7 @@ Here contains things that I'm either gonna implement or you are free to implemen
 ## Download for Offline Playing
 Are you going to be without internet for a while? Perhaps on a flight, or just technical difficulties. Want to play this offline? Well, luckily you can.
 
-You can click [here]() and download a zip file of this Git repository, and you can play it without an internet connection.
+You can click [here](http://github.com/Kimitzuni/GoogleDeathGuesser/zipball/master/) and download a zip file of this Git repository, and you can play it without an internet connection.
 
 Simply unzip it using your favourite archive tool, whether 7zip, WinRAR etc. And then just open `index.html` in a web browser.
 
