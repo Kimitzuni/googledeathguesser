@@ -1,0 +1,107 @@
+@media (prefers-color-scheme: light) {
+body {
+	background-color: #d8dee9;
+	color: #282c34;
+	--border-color: #282c34;
+}
+
+a:hover {
+	background-color: #282c34;
+	color: #d8dee9;
+	padding: 2px;
+}
+
+a {
+	color: #282c34;
+}
+}
+
+@media (prefers-color-scheme: dark) {
+body {
+	background-color: #282c34;
+	color: #d8dee9;
+	--border-color: #d8dee9;
+}
+
+a:hover {
+	background-color: #d8dee9;
+	color: #282c34;
+	padding: 2px;
+}
+
+a {
+	color: #d8dee9;
+}
+}
+
+a { 
+	padding: 2px;
+	text-decoration: none;
+}
+
+body {
+	font-family: "Ubuntu", sans;
+}
+
+.title {
+	font-family: "Product Sans";
+	font-size: 30px;
+	text-align: center;
+}
+
+h2 {
+	font-family: "Product Sans";
+	font-size: 30px;
+	text-align: center;
+}
+
+.product {
+	align-content: center;
+}
+
+.howItWorks {
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 5px;
+	border: 1px var(--border-color) solid;
+	justify-content: center;
+}
+
+.howItWorks h3 {
+	text-align: center;
+	font-size: 20px;
+	margin-top: 5px;
+}
+
+.productImage {
+	width: 25% !important;
+	background-color: #d8dee9;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.btn {
+	  padding: 5px 5px;
+	  font-size: 20px;
+	  font-weight: 900;
+	  color: #d8dee9;
+	  background-color: #333c34;
+	  border: none;
+	  cursor: pointer;
+	  width: max-content;
+	  margin-top: -15px;
+  }
+
+#productEOLEntryDate {
+	padding: 5px;
+	font-size: 15px;
+	font-weight: 900;
+	color: #d8dee9;
+	background-color: #333c34;
+	border: none;
+	cursor: pointer;
+	width: max-content;
+	margin-top: -15px;
+}

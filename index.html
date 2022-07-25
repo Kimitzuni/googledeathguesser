@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Google Product Death Guesser</title>
+		<link rel="stylesheet" href="assets/css/fonts.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+		<script src="assets/js/script.js"></script>
+	</head>
+
+	<body>
+		<div class="title">
+			<h1 id="titleText">Google Product Death Guesser</h1>
+		</div>
+
+		<p align="center">
+			<button onclick="location.reload();" class="btn">New Game</button>
+			<button onclick="returnRandNum();" id="productButton" class="btn">Show Product</button>
+		</p>
+		
+
+		<div class="howItWorks" id="howItWorksBox">
+		<h3>How it Works</h3>
+		<p>
+		Here's how it works. A picture of a Google product, either
+		dead, going to be killed, or active, will appear. You then have
+		to guess when the product got killed or is going to be killed.
+		</p>
+		</div>
+
+		<h2 id="Score" style="display: none;">Score: <idk id="scoreCounter">0</idk></h2>
+		<div class="product">
+			<br>
+			<img src="" class="productImage" />
+		</div>
+		<br>
+		<p align="center">
+		I guess that <b id="productName">________________</b> will be killed on: 
+
+		<input type="date" id="productEOLEntryDate" name="productEOLDateGuess" value="yyyy-mm-dd" min="1970-01-01" max="9999-12-31"><br><br>
+		       <button onclick="submitDate();" class="btn">Submit Date</button>
+		</p>
+
+		<footer><br><br><br>
+			<p align="center">Rebecca White, 2022</p>
+
+			<p align="center">
+			All images on this site are taken from the Wikipedia pages of the corrosponding products, this means that some are higher quality<br>
+			than others, as not all Google Product Images have a high-quality or an SVG version available.
+			</p>
+
+			<p align="center">
+			Fonts used on this site are <font face="Product Sans">Product Sans</font> and Ubuntu.</p>
+
+			<p align="center">
+			Source code for this is available on <a href="https://github.com/Kimitzuni/googledeathguesser">GitHub</a>
+			</p>
+		</footer>
+	</body>
+</html>
