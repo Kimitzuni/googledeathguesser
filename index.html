@@ -6,37 +6,43 @@
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<link rel="icon" type="image/png" href="assets/img/favicon.png" />
 		<script src="assets/js/script.js"></script>
+		<script src="assets/js/products.js"></script>
 	</head>
 
 	<body>
 		<div class="title">
-			<h1 id="titleText">Google Product Death Guesser</h1>
+			<h1>Google Product Death Guesser</h1>
 		</div>
 
 		<p align="center">
-			<button onclick="location.reload();" class="btn">New Game</button>
+			<button onclick="endGame();" class="btn">New Game</button>
 			<button onclick="returnRandNum();" id="productButton" class="btn">Show Product</button>
 		</p>
 		
-
 		<div class="howItWorks" id="howItWorksBox">
 		<h3>How it Works</h3>
 		<p>
-		Here's how it works. A picture of a Google product, either dead, going to be killed, or active, will appear. You then have 
-		to guess when the product got killed or is going to be killed.
+		Here's how it works - When you click <i>Show Product</i>, a logo of a Google product will appear below. You will have to 
+		guess when it's going to be killed, or when it was killed. Should be easy.
 		</p>
-		
-		<p><button class="btn" onclick="createCookie(1);">Never Show This Again</button></p>
 		</div>
 
-		<h2 id="Score" style="display: none;">Score: <idk id="scoreCounter">0</idk></h2>
+		<div class="sideBox">
+			<h2>Score & Info</h2>
+			<p id="Score">Score: <placeholder id="scoreCounter">0/0</placeholder></p>
+			<p>Timer: <placeholder id="timerContent">0m 0s</placeholder></p>
+			<p>You got the previous date: <placeholder id="prevAnswerResult"></placeholder></p>
+		
+		</p>
+			
+		</div>
 
 		<div class="productDescBox" id="descriptionBox">
 			<h2>About this Product</h2>
 			<p id="productDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-
-			<p>The Previous Product Was Killed On: <br><b id="prevKillDate"></b></p>
+			<hr>
+			<p>The previous product was<br><b id="prevKillDate"></b></p>
 		</div>
 
 		<div class="product">
@@ -53,19 +59,17 @@
 		       <button onclick="submitDate();" class="btn">Submit Date</button>
 		</p>
 
-		<footer><br><br><br>
-			<p align="center">Rebecca White, 2022</p>
+		<footer><br>
+			<p id="footerText">Rebecca White, 2022  | <a href="mailto:rwhitego@gmail.com">Email Me</a> | 
+				<a href="http://github.com/Kimitzuni/GoogleDeathGuesser/zipball/master/">Download for Offline Playing</a></p>
 
-			<p align="center">
+			<p id="ContentInfo" align="center">
 			All images on this site are taken from the Wikipedia pages of the corrosponding products, this means that some are higher quality<br>
-			than others, as not all Google Product Images have a high-quality or an SVG version available.
-			</p>
+			than others, as not all Google Product Images have a high-quality or an SVG version available.<br><br>
 
-			<p align="center">
-			Fonts used on this site are <font face="Product Sans">Product Sans</font> and Ubuntu.</p>
-
-			<p align="center">
-			Source code for this is available on <a href="https://github.com/Kimitzuni/googledeathguesser">GitHub</a>
+			Fonts used on this site are <font face="Product Sans">Product Sans</font> and Ubuntu.<br>
+			
+			Source code for this is available on <a href="https://github.com/Kimitzuni/googledeathguesser">GitHub</a> and licensed under the <a href="https://gnu.org/licenses/old-licenses/gpl-2.0">GNU GPL2</a>
 			</p>
 		</footer>
 	</body>
